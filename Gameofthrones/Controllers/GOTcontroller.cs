@@ -8,6 +8,12 @@ namespace Gameofthrones.Controllers
 {
     public class GOTcontroller : Controller
     {
-
+        public ContentResult Details()
+        {
+            return new ContentResult()
+            {
+                    Content = "What would you like to know about Game of Thrones?"
+            };
+        }
     }
 }
