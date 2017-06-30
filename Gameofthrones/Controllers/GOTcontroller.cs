@@ -8,14 +8,12 @@ namespace Gameofthrones.Controllers
 {
     public class GOTcontroller : Controller
     {
-        public ActionResult Details()
+        public ActionResult Detail
         {
-            if (DateTime.Today.DayOfWeek==DayOfWeek.Sunday)
+            get
             {
-                return Redirect("/");
+                return View();
             }
-            return Content("What would you like to know about Game of Thrones?");
-
         }
     }
 }
