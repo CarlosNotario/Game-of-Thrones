@@ -10,7 +10,6 @@ namespace Gameofthrones.Controllers
     {
         public ActionResult Detail
         {
-
             get
             {
                 return View();
