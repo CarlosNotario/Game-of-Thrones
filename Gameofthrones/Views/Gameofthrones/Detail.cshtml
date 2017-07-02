@@ -1,22 +1,6 @@
 ﻿@{
     Layout = null;
 
-    var seriesTitle = "Winter Is Coming";
-    var episodeNumber = 0001;
-    var description = "<p>Jon Arryn, the Hand of the King, is dead. King Robert Baratheon plans to ask his oldest friend, Eddard Stark, to take Jon's place. Across the sea, Viserys Targaryen plans to wed his sister to a nomadic warlord in exchange for an army.</p>";
-    var credits = new string[]
-            { "Directed by Timothy Van Patten  ... (as Tim Van Patten)",
-            "Writing Credits, " +
-            " David Benioff   ... (created by)",
-            "D.B. Weiss  ... (created by)",
-
-            "George R.R. Martin  ... (based on 'A Song of Ice and Fire' by)",
-
-
-            "David Benioff   ... (written by)",
-            "D.B. Weiss  ... (written by)"
-
-    };
 }
 
 <!DOCTYPE html>
@@ -24,23 +8,23 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@seriesTitle</title>
+    <title>@ViewBag.SeriesTitle</title>
 </head>
 <body>
     <div>
-        <h1>@seriesTitle</h1>
-        <h2>Episode #@episodeNumber</h2>
+        <h1>@ViewBag.SeriesTitle</h1>
+        <h2>Episode #@ViewBag.EpisodeNumber</h2>
 
         <h5>Description:</h5>
-        <div>@Html.Raw(description)</div>
+        <div>@Html.Raw(ViewBag.Description)</div>
 
-        @if (credits.Length > 0)
+        @if (ViewBag.Credits.Length > 0)
         {
             <h5>Credits:</h5>
             <div>
                 <ul>
-                    @foreach (var credit in credits)
-                {
+                    @foreach (var credit in ViewBag.Credits)
+                    {
                         <li>@credit</li>
                     }
                 </ul>
