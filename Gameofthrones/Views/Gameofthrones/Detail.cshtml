@@ -1,35 +1,24 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layouts.cshtml";
+    ViewBag.Title = "Game of Thrones Details";
 
 }
 
-<!DOCTYPE html>
+<h1>@ViewBag.SeriesTitle</h1>
+<h2>Episode #@ViewBag.EpisodeNumber</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.SeriesTitle</title>
-</head>
-<body>
+<h5>Description:</h5>
+<div>@Html.Raw(ViewBag.Description)</div>
+
+@if (ViewBag.Credits.Length > 0)
+{
+    <h5>Credits:</h5>
     <div>
-        <h1>@ViewBag.SeriesTitle</h1>
-        <h2>Episode #@ViewBag.EpisodeNumber</h2>
-
-        <h5>Description:</h5>
-        <div>@Html.Raw(ViewBag.Description)</div>
-
-        @if (ViewBag.Credits.Length > 0)
-        {
-            <h5>Credits:</h5>
-            <div>
-                <ul>
-                    @foreach (var credit in ViewBag.Credits)
-                    {
-                        <li>@credit</li>
-                    }
-                </ul>
-            </div>
-        }
+        <ul>
+            @foreach (var credit in ViewBag.Credits)
+            {
+                <li>@credit</li>
+            }
+        </ul>
     </div>
-</body>
-</html>
+}
