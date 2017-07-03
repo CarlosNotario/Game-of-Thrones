@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -25,6 +27,18 @@ namespace Gameofthrones.Controllers
             };
                           
             return View();
+            ViewBag.
+        }
+        private Task <HttpResponseMessage> getEpisode()
+        {
+            var Client = new HttpClient();
+            return Client.GetAsync("http://www.omdbapi.com/?apikey=[yourkey]&");
+
+        }
+        private Task <HttpResponseMessage> getPoster()
+        {
+            var Client = new HttpClient();
+            return Client.GetAsync("http://img.omdbapi.com/?apikey=[yourkey]&")
         }
     }
 }
