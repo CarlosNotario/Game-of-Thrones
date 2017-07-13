@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Gameofthrones.Models;
 
 namespace Gameofthrones.Controllers
 {
@@ -12,7 +13,13 @@ namespace Gameofthrones.Controllers
     {
         public ActionResult Detail()
         {
+            var GameOfThrones = new EpisodeSet()
+            {
+                EpisodeTitle = "Winter Is Coming",
+            };
+
             ViewBag.SeriesTitle = "Winter Is Coming";
+            ViewBag.EpisodeSeason = 0001;
             ViewBag.EpisodeNumber = 0001;
             ViewBag.Description = "<p>Jon Arryn, the Hand of the King, is dead. King Robert Baratheon plans to ask his oldest friend, Eddard Stark, to take Jon's place. Across the sea, Viserys Targaryen plans to wed his sister to a nomadic warlord in exchange for an army.</p>";
             ViewBag.Credits = new string[]
@@ -26,19 +33,19 @@ namespace Gameofthrones.Controllers
                     "D.B. Weiss  ... (written by)"
             };
                           
-            return View();
-            ViewBag.
+            return View(GameOfThrones);
+            
         }
-        private Task <HttpResponseMessage> getEpisode()
+        /*private Task <HttpResponseMessage> getEpisode()
         {
             var Client = new HttpClient();
             return Client.GetAsync("http://www.omdbapi.com/?apikey=[yourkey]&");
 
         }
-        private Task <HttpResponseMessage> getPoster()
+        private Task<HttpResponseMessage> getPoster()
         {
             var Client = new HttpClient();
-            return Client.GetAsync("http://img.omdbapi.com/?apikey=[yourkey]&")
-        }
+            return Client.GetAsync("http://img.omdbapi.com/?apikey=[yourkey]&");
+        }*/
     }
 }

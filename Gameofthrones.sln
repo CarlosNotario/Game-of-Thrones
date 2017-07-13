@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gameofthrones", "Gameofthrones\Gameofthrones.csproj", "{7B890592-C645-426F-85B6-AC159FA871C2}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "GotEpisodes", "GotEpisodes\GotEpisodes.sqlproj", "{4D40D897-C064-4C50-8741-4A93BF236585}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{7B890592-C645-426F-85B6-AC159FA871C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B890592-C645-426F-85B6-AC159FA871C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B890592-C645-426F-85B6-AC159FA871C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D40D897-C064-4C50-8741-4A93BF236585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D40D897-C064-4C50-8741-4A93BF236585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D40D897-C064-4C50-8741-4A93BF236585}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4D40D897-C064-4C50-8741-4A93BF236585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D40D897-C064-4C50-8741-4A93BF236585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D40D897-C064-4C50-8741-4A93BF236585}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
