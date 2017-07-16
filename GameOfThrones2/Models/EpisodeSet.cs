@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Gameofthrones.Models
+namespace GameOfThrones2.Models
 {
     public class EpisodeSet
     {
@@ -12,8 +12,6 @@ namespace Gameofthrones.Models
         public int Season { get; set; }
         public int EpisodeNumber { get; set; }
         public string Description { get; set; }
-        
+
     }
 }
-/*public string SeriesTitle { get; set; }*/
-

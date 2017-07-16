@@ -9,7 +9,7 @@ INSERT INTO EpisodeTable values ('The Kingsroad', 1,
 only his daughters to King''s Landing. Jon Snow 
 goes with his uncle Benjen to the Wall. Tyrion 
 joins them.');
-Insert into EpisodeTable values ('Lord Snow', 1, 3, 
+Insert into EpisodeTable values ('Lord Snow', 1, 
 3, 'Lord Stark and his daughters arrive at King''s
 Landing to discover the intrigues of the king''s
 realm.');

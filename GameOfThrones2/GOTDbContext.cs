@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using GameOfThrones2.Models;
 
-namespace Gameofthrones.Models.DataBase
+namespace GameOfThrones2
 {
     public class GOTDbContext : DbContext
     {
@@ -12,7 +13,7 @@ namespace Gameofthrones.Models.DataBase
 
         public GOTDbContext() : base("Episodes")
         {
-            
+
         }
     }
 }

@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using Gameofthrones.Models;
-using Gameofthrones.Models.DataBase;
+using GameOfThrones2.Models;
 
-namespace Gameofthrones.Controllers
+namespace GameOfThrones2.Controllers
 {
     public class GOTcontroller : Controller
     {
@@ -17,8 +14,7 @@ namespace Gameofthrones.Controllers
             List<EpisodeSet> GameOfThrones;
             using (var context = new GOTDbContext())
 
-                GameOfThrones = context.EpisodeSets.ToList();//.First(e => e.EpisodeNumber == 1);
-            //{
+                GameOfThrones = context.EpisodeSets.ToList();
             //    Season=1,
             //    EpisodeNumber=1,
             //    EpisodeTitle="Winter is Coming",
